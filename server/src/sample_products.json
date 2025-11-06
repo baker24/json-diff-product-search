@@ -1,0 +1,2002 @@
+[
+  {
+    "id": 1,
+    "name": "Desk Pad",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 405.28,
+    "rating": 4.8,
+    "inStock": true,
+    "description": "Premium product for workspace use."
+  },
+  {
+    "id": 2,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "brand": "OfficeMate",
+    "price": 287.76,
+    "rating": 3.6,
+    "inStock": false,
+    "description": "Compact product for workspace use."
+  },
+  {
+    "id": 3,
+    "name": "Office Chair Mat",
+    "category": "Accessories",
+    "brand": "WorkPro",
+    "price": 390.69,
+    "rating": 4.8,
+    "inStock": false,
+    "description": "Adjustable tool for travel use."
+  },
+  {
+    "id": 4,
+    "name": "Office Chair Mat",
+    "category": "Accessories",
+    "brand": "ErgoWorks",
+    "price": 383.56,
+    "rating": 4.1,
+    "inStock": false,
+    "description": "Durable product for travel use."
+  },
+  {
+    "id": 5,
+    "name": "USB-C Hub",
+    "category": "Furniture",
+    "brand": "WorkPro",
+    "price": 188.17,
+    "rating": 4.7,
+    "inStock": false,
+    "description": "Durable item for office use."
+  },
+  {
+    "id": 6,
+    "name": "Cable Management Kit",
+    "category": "Electronics",
+    "brand": "WorkPro",
+    "price": 231.06,
+    "rating": 3.7,
+    "inStock": true,
+    "description": "Compact accessory for home use."
+  },
+  {
+    "id": 7,
+    "name": "Desk Organizer",
+    "category": "Furniture",
+    "brand": "TechEase",
+    "price": 470.48,
+    "rating": 3.4,
+    "inStock": false,
+    "description": "Durable accessory for home use."
+  },
+  {
+    "id": 8,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "brand": "ComfortPlus",
+    "price": 264.12,
+    "rating": 4.1,
+    "inStock": false,
+    "description": "Compact product for home use."
+  },
+  {
+    "id": 9,
+    "name": "Desk Pad",
+    "category": "Audio",
+    "brand": "TechEase",
+    "price": 441.76,
+    "rating": 4.3,
+    "inStock": true,
+    "description": "Durable device for travel use."
+  },
+  {
+    "id": 10,
+    "name": "USB-C Hub",
+    "category": "Electronics",
+    "brand": "SmartSpace",
+    "price": 276.55,
+    "rating": 4.3,
+    "inStock": true,
+    "description": "Premium tool for home use."
+  },
+  {
+    "id": 11,
+    "name": "Portable SSD",
+    "category": "Electronics",
+    "brand": "SmartSpace",
+    "price": 298.84,
+    "rating": 3.3,
+    "inStock": true,
+    "description": "Premium product for office use."
+  },
+  {
+    "id": 12,
+    "name": "Wireless Mouse",
+    "category": "Accessories",
+    "brand": "OfficeMate",
+    "price": 255.29,
+    "rating": 4.7,
+    "inStock": false,
+    "description": "Ergonomic accessory for home use."
+  },
+  {
+    "id": 13,
+    "name": "Portable SSD",
+    "category": "Office Supplies",
+    "brand": "SmartSpace",
+    "price": 478.89,
+    "rating": 3.0,
+    "inStock": false,
+    "description": "Premium item for office use."
+  },
+  {
+    "id": 14,
+    "name": "USB-C Hub",
+    "category": "Office Supplies",
+    "brand": "SmartSpace",
+    "price": 371.18,
+    "rating": 4.0,
+    "inStock": false,
+    "description": "Compact item for home use."
+  },
+  {
+    "id": 15,
+    "name": "Portable SSD",
+    "category": "Audio",
+    "brand": "ErgoWorks",
+    "price": 432.19,
+    "rating": 3.1,
+    "inStock": false,
+    "description": "High-quality tool for travel use."
+  },
+  {
+    "id": 16,
+    "name": "Mini Whiteboard",
+    "category": "Furniture",
+    "brand": "WorkPro",
+    "price": 295.44,
+    "rating": 3.8,
+    "inStock": false,
+    "description": "Premium item for travel use."
+  },
+  {
+    "id": 17,
+    "name": "Bluetooth Speaker",
+    "category": "Accessories",
+    "brand": "TechEase",
+    "price": 20.71,
+    "rating": 4.1,
+    "inStock": true,
+    "description": "Compact product for travel use."
+  },
+  {
+    "id": 18,
+    "name": "Desk Organizer",
+    "category": "Accessories",
+    "brand": "ZenDesk",
+    "price": 417.81,
+    "rating": 3.7,
+    "inStock": false,
+    "description": "Compact product for home use."
+  },
+  {
+    "id": 19,
+    "name": "Mini Whiteboard",
+    "category": "Accessories",
+    "brand": "ZenDesk",
+    "price": 171.83,
+    "rating": 3.2,
+    "inStock": false,
+    "description": "Compact item for home use."
+  },
+  {
+    "id": 20,
+    "name": "Bluetooth Speaker",
+    "category": "Lighting",
+    "brand": "SmartSpace",
+    "price": 114.99,
+    "rating": 3.5,
+    "inStock": false,
+    "description": "Durable device for travel use."
+  },
+  {
+    "id": 21,
+    "name": "Wireless Charger",
+    "category": "Accessories",
+    "brand": "ErgoWorks",
+    "price": 362.74,
+    "rating": 3.0,
+    "inStock": false,
+    "description": "High-quality device for office use."
+  },
+  {
+    "id": 22,
+    "name": "Ergonomic Chair",
+    "category": "Office Supplies",
+    "brand": "ErgoWorks",
+    "price": 373.83,
+    "rating": 4.5,
+    "inStock": true,
+    "description": "Premium accessory for office use."
+  },
+  {
+    "id": 23,
+    "name": "Dual Monitor Arm",
+    "category": "Electronics",
+    "brand": "ErgoWorks",
+    "price": 151.56,
+    "rating": 4.1,
+    "inStock": true,
+    "description": "Compact accessory for travel use."
+  },
+  {
+    "id": 24,
+    "name": "LED Monitor",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 207.75,
+    "rating": 3.4,
+    "inStock": true,
+    "description": "Adjustable device for office use."
+  },
+  {
+    "id": 25,
+    "name": "Standing Desk Converter",
+    "category": "Electronics",
+    "brand": "TechEase",
+    "price": 343.68,
+    "rating": 3.0,
+    "inStock": true,
+    "description": "Adjustable device for workspace use."
+  },
+  {
+    "id": 26,
+    "name": "Standing Desk Converter",
+    "category": "Electronics",
+    "brand": "SmartSpace",
+    "price": 240.62,
+    "rating": 3.2,
+    "inStock": false,
+    "description": "Premium product for office use."
+  },
+  {
+    "id": 27,
+    "name": "Mini Whiteboard",
+    "category": "Electronics",
+    "brand": "ErgoWorks",
+    "price": 425.58,
+    "rating": 4.9,
+    "inStock": true,
+    "description": "Premium item for home use."
+  },
+  {
+    "id": 28,
+    "name": "Portable SSD",
+    "category": "Accessories",
+    "brand": "ComfortPlus",
+    "price": 55.57,
+    "rating": 3.4,
+    "inStock": false,
+    "description": "Premium device for home use."
+  },
+  {
+    "id": 29,
+    "name": "Foot Rest",
+    "category": "Furniture",
+    "brand": "TechEase",
+    "price": 447.15,
+    "rating": 3.4,
+    "inStock": false,
+    "description": "Compact device for home use."
+  },
+  {
+    "id": 30,
+    "name": "Ergonomic Chair",
+    "category": "Accessories",
+    "brand": "OfficeMate",
+    "price": 334.98,
+    "rating": 3.8,
+    "inStock": false,
+    "description": "Adjustable product for home use."
+  },
+  {
+    "id": 31,
+    "name": "Portable SSD",
+    "category": "Audio",
+    "brand": "TechEase",
+    "price": 147.35,
+    "rating": 3.7,
+    "inStock": false,
+    "description": "Premium tool for workspace use."
+  },
+  {
+    "id": 32,
+    "name": "Noise Cancelling Headphones",
+    "category": "Furniture",
+    "brand": "ComfortPlus",
+    "price": 35.55,
+    "rating": 4.9,
+    "inStock": true,
+    "description": "Premium tool for home use."
+  },
+  {
+    "id": 33,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "brand": "SmartSpace",
+    "price": 339.86,
+    "rating": 3.3,
+    "inStock": true,
+    "description": "High-quality product for office use."
+  },
+  {
+    "id": 34,
+    "name": "Wireless Charger",
+    "category": "Audio",
+    "brand": "OfficeMate",
+    "price": 122.27,
+    "rating": 3.6,
+    "inStock": false,
+    "description": "High-quality item for travel use."
+  },
+  {
+    "id": 35,
+    "name": "USB-C Hub",
+    "category": "Lighting",
+    "brand": "OfficeMate",
+    "price": 399.64,
+    "rating": 4.8,
+    "inStock": false,
+    "description": "Durable device for office use."
+  },
+  {
+    "id": 36,
+    "name": "Laptop Stand",
+    "category": "Office Supplies",
+    "brand": "ComfortPlus",
+    "price": 436.73,
+    "rating": 4.7,
+    "inStock": true,
+    "description": "Premium accessory for workspace use."
+  },
+  {
+    "id": 37,
+    "name": "Laptop Stand",
+    "category": "Audio",
+    "brand": "ComfortPlus",
+    "price": 287.42,
+    "rating": 3.4,
+    "inStock": true,
+    "description": "High-quality item for home use."
+  },
+  {
+    "id": 38,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "brand": "WorkPro",
+    "price": 342.82,
+    "rating": 3.3,
+    "inStock": true,
+    "description": "Adjustable product for home use."
+  },
+  {
+    "id": 39,
+    "name": "Ergonomic Chair",
+    "category": "Lighting",
+    "brand": "WorkPro",
+    "price": 155.97,
+    "rating": 4.5,
+    "inStock": true,
+    "description": "Adjustable product for travel use."
+  },
+  {
+    "id": 40,
+    "name": "Webcam HD",
+    "category": "Office Supplies",
+    "brand": "ErgoWorks",
+    "price": 217.86,
+    "rating": 3.9,
+    "inStock": false,
+    "description": "High-quality accessory for home use."
+  },
+  {
+    "id": 41,
+    "name": "Mini Whiteboard",
+    "category": "Accessories",
+    "brand": "ZenDesk",
+    "price": 118.29,
+    "rating": 4.6,
+    "inStock": false,
+    "description": "High-quality accessory for travel use."
+  },
+  {
+    "id": 42,
+    "name": "Dual Monitor Arm",
+    "category": "Audio",
+    "brand": "WorkPro",
+    "price": 457.17,
+    "rating": 5.0,
+    "inStock": true,
+    "description": "Premium device for home use."
+  },
+  {
+    "id": 43,
+    "name": "Laptop Stand",
+    "category": "Electronics",
+    "brand": "OfficeMate",
+    "price": 267.28,
+    "rating": 3.2,
+    "inStock": true,
+    "description": "High-quality tool for home use."
+  },
+  {
+    "id": 44,
+    "name": "Noise Cancelling Headphones",
+    "category": "Audio",
+    "brand": "WorkPro",
+    "price": 159.25,
+    "rating": 4.7,
+    "inStock": false,
+    "description": "High-quality tool for workspace use."
+  },
+  {
+    "id": 45,
+    "name": "Mini Whiteboard",
+    "category": "Electronics",
+    "brand": "WorkPro",
+    "price": 274.84,
+    "rating": 4.6,
+    "inStock": false,
+    "description": "High-quality item for travel use."
+  },
+  {
+    "id": 46,
+    "name": "Portable SSD",
+    "category": "Electronics",
+    "brand": "OfficeMate",
+    "price": 195.25,
+    "rating": 4.6,
+    "inStock": true,
+    "description": "Ergonomic item for home use."
+  },
+  {
+    "id": 47,
+    "name": "USB-C Hub",
+    "category": "Office Supplies",
+    "brand": "WorkPro",
+    "price": 197.64,
+    "rating": 4.5,
+    "inStock": true,
+    "description": "High-quality item for office use."
+  },
+  {
+    "id": 48,
+    "name": "Noise Cancelling Headphones",
+    "category": "Audio",
+    "brand": "ErgoWorks",
+    "price": 45.5,
+    "rating": 4.8,
+    "inStock": false,
+    "description": "Premium tool for workspace use."
+  },
+  {
+    "id": 49,
+    "name": "Webcam HD",
+    "category": "Accessories",
+    "brand": "TechEase",
+    "price": 359.81,
+    "rating": 3.0,
+    "inStock": false,
+    "description": "Adjustable device for office use."
+  },
+  {
+    "id": 50,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "brand": "WorkPro",
+    "price": 416.04,
+    "rating": 3.3,
+    "inStock": true,
+    "description": "Ergonomic item for office use."
+  },
+  {
+    "id": 51,
+    "name": "Cable Management Kit",
+    "category": "Electronics",
+    "brand": "ZenDesk",
+    "price": 438.06,
+    "rating": 4.0,
+    "inStock": true,
+    "description": "High-quality tool for workspace use."
+  },
+  {
+    "id": 52,
+    "name": "Cable Management Kit",
+    "category": "Office Supplies",
+    "brand": "OfficeMate",
+    "price": 215.5,
+    "rating": 3.8,
+    "inStock": true,
+    "description": "Durable accessory for workspace use."
+  },
+  {
+    "id": 53,
+    "name": "Mini Whiteboard",
+    "category": "Audio",
+    "brand": "ErgoWorks",
+    "price": 63.4,
+    "rating": 3.8,
+    "inStock": false,
+    "description": "Adjustable product for office use."
+  },
+  {
+    "id": 54,
+    "name": "Dual Monitor Arm",
+    "category": "Office Supplies",
+    "brand": "ZenDesk",
+    "price": 87.58,
+    "rating": 4.3,
+    "inStock": true,
+    "description": "Durable tool for office use."
+  },
+  {
+    "id": 55,
+    "name": "Office Chair Mat",
+    "category": "Audio",
+    "brand": "ComfortPlus",
+    "price": 292.52,
+    "rating": 3.2,
+    "inStock": true,
+    "description": "High-quality device for home use."
+  },
+  {
+    "id": 56,
+    "name": "Dual Monitor Arm",
+    "category": "Accessories",
+    "brand": "OfficeMate",
+    "price": 407.52,
+    "rating": 4.2,
+    "inStock": false,
+    "description": "High-quality item for workspace use."
+  },
+  {
+    "id": 57,
+    "name": "Wireless Charger",
+    "category": "Lighting",
+    "brand": "TechEase",
+    "price": 253.28,
+    "rating": 4.6,
+    "inStock": true,
+    "description": "Durable accessory for workspace use."
+  },
+  {
+    "id": 58,
+    "name": "USB-C Hub",
+    "category": "Office Supplies",
+    "brand": "SmartSpace",
+    "price": 402.05,
+    "rating": 3.8,
+    "inStock": true,
+    "description": "Ergonomic product for home use."
+  },
+  {
+    "id": 59,
+    "name": "Smart Lamp",
+    "category": "Audio",
+    "brand": "OfficeMate",
+    "price": 494.23,
+    "rating": 3.9,
+    "inStock": true,
+    "description": "Ergonomic product for travel use."
+  },
+  {
+    "id": 60,
+    "name": "Wireless Mouse",
+    "category": "Furniture",
+    "brand": "OfficeMate",
+    "price": 441.72,
+    "rating": 3.7,
+    "inStock": false,
+    "description": "Premium item for workspace use."
+  },
+  {
+    "id": 61,
+    "name": "Standing Desk Converter",
+    "category": "Audio",
+    "brand": "SmartSpace",
+    "price": 190.16,
+    "rating": 4.5,
+    "inStock": true,
+    "description": "Compact tool for travel use."
+  },
+  {
+    "id": 62,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "brand": "WorkPro",
+    "price": 59.64,
+    "rating": 4.1,
+    "inStock": false,
+    "description": "High-quality product for home use."
+  },
+  {
+    "id": 63,
+    "name": "Noise Cancelling Headphones",
+    "category": "Office Supplies",
+    "brand": "ComfortPlus",
+    "price": 143.34,
+    "rating": 3.4,
+    "inStock": false,
+    "description": "Compact item for travel use."
+  },
+  {
+    "id": 64,
+    "name": "Cable Management Kit",
+    "category": "Electronics",
+    "brand": "SmartSpace",
+    "price": 75.54,
+    "rating": 3.2,
+    "inStock": true,
+    "description": "High-quality product for home use."
+  },
+  {
+    "id": 65,
+    "name": "Ergonomic Chair",
+    "category": "Furniture",
+    "brand": "TechEase",
+    "price": 24.48,
+    "rating": 4.7,
+    "inStock": false,
+    "description": "Compact product for workspace use."
+  },
+  {
+    "id": 66,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "brand": "ComfortPlus",
+    "price": 151.47,
+    "rating": 3.9,
+    "inStock": false,
+    "description": "Durable tool for travel use."
+  },
+  {
+    "id": 67,
+    "name": "Mechanical Keyboard",
+    "category": "Furniture",
+    "brand": "TechEase",
+    "price": 16.84,
+    "rating": 4.8,
+    "inStock": false,
+    "description": "Ergonomic product for travel use."
+  },
+  {
+    "id": 68,
+    "name": "Wireless Charger",
+    "category": "Furniture",
+    "brand": "OfficeMate",
+    "price": 306.17,
+    "rating": 4.5,
+    "inStock": false,
+    "description": "High-quality product for home use."
+  },
+  {
+    "id": 69,
+    "name": "Dual Monitor Arm",
+    "category": "Electronics",
+    "brand": "ComfortPlus",
+    "price": 315.72,
+    "rating": 3.0,
+    "inStock": false,
+    "description": "Durable tool for office use."
+  },
+  {
+    "id": 70,
+    "name": "Dual Monitor Arm",
+    "category": "Electronics",
+    "brand": "ZenDesk",
+    "price": 352.68,
+    "rating": 5.0,
+    "inStock": false,
+    "description": "Adjustable item for workspace use."
+  },
+  {
+    "id": 71,
+    "name": "LED Monitor",
+    "category": "Accessories",
+    "brand": "WorkPro",
+    "price": 176.96,
+    "rating": 4.4,
+    "inStock": true,
+    "description": "Adjustable accessory for workspace use."
+  },
+  {
+    "id": 72,
+    "name": "Portable SSD",
+    "category": "Office Supplies",
+    "brand": "ZenDesk",
+    "price": 440.55,
+    "rating": 4.5,
+    "inStock": false,
+    "description": "Premium item for travel use."
+  },
+  {
+    "id": 73,
+    "name": "Wireless Charger",
+    "category": "Lighting",
+    "brand": "SmartSpace",
+    "price": 22.07,
+    "rating": 4.3,
+    "inStock": false,
+    "description": "High-quality tool for workspace use."
+  },
+  {
+    "id": 74,
+    "name": "Laptop Stand",
+    "category": "Office Supplies",
+    "brand": "OfficeMate",
+    "price": 445.33,
+    "rating": 3.7,
+    "inStock": true,
+    "description": "Durable tool for workspace use."
+  },
+  {
+    "id": 75,
+    "name": "Dual Monitor Arm",
+    "category": "Accessories",
+    "brand": "TechEase",
+    "price": 361.54,
+    "rating": 3.6,
+    "inStock": true,
+    "description": "Durable device for office use."
+  },
+  {
+    "id": 76,
+    "name": "Noise Cancelling Headphones",
+    "category": "Office Supplies",
+    "brand": "TechEase",
+    "price": 313.22,
+    "rating": 4.8,
+    "inStock": true,
+    "description": "Ergonomic product for workspace use."
+  },
+  {
+    "id": 77,
+    "name": "Desk Pad",
+    "category": "Office Supplies",
+    "brand": "WorkPro",
+    "price": 77.41,
+    "rating": 3.5,
+    "inStock": false,
+    "description": "Durable device for home use."
+  },
+  {
+    "id": 78,
+    "name": "USB-C Hub",
+    "category": "Electronics",
+    "brand": "WorkPro",
+    "price": 74.71,
+    "rating": 5.0,
+    "inStock": false,
+    "description": "Ergonomic item for workspace use."
+  },
+  {
+    "id": 79,
+    "name": "Desk Pad",
+    "category": "Accessories",
+    "brand": "WorkPro",
+    "price": 183.44,
+    "rating": 3.7,
+    "inStock": true,
+    "description": "Adjustable item for travel use."
+  },
+  {
+    "id": 80,
+    "name": "Wireless Charger",
+    "category": "Furniture",
+    "brand": "TechEase",
+    "price": 413.45,
+    "rating": 4.7,
+    "inStock": true,
+    "description": "Ergonomic accessory for workspace use."
+  },
+  {
+    "id": 81,
+    "name": "Laptop Stand",
+    "category": "Office Supplies",
+    "brand": "WorkPro",
+    "price": 345.66,
+    "rating": 3.1,
+    "inStock": false,
+    "description": "Ergonomic accessory for workspace use."
+  },
+  {
+    "id": 82,
+    "name": "Portable SSD",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 353.58,
+    "rating": 3.1,
+    "inStock": false,
+    "description": "Adjustable item for workspace use."
+  },
+  {
+    "id": 83,
+    "name": "Webcam HD",
+    "category": "Electronics",
+    "brand": "TechEase",
+    "price": 142.45,
+    "rating": 4.9,
+    "inStock": true,
+    "description": "Durable item for home use."
+  },
+  {
+    "id": 84,
+    "name": "Mechanical Keyboard",
+    "category": "Office Supplies",
+    "brand": "ZenDesk",
+    "price": 149.76,
+    "rating": 3.6,
+    "inStock": true,
+    "description": "High-quality item for workspace use."
+  },
+  {
+    "id": 85,
+    "name": "Portable SSD",
+    "category": "Electronics",
+    "brand": "TechEase",
+    "price": 392.42,
+    "rating": 4.3,
+    "inStock": true,
+    "description": "Compact item for office use."
+  },
+  {
+    "id": 86,
+    "name": "Portable SSD",
+    "category": "Office Supplies",
+    "brand": "ZenDesk",
+    "price": 376.5,
+    "rating": 3.5,
+    "inStock": true,
+    "description": "Adjustable accessory for office use."
+  },
+  {
+    "id": 87,
+    "name": "Office Chair Mat",
+    "category": "Accessories",
+    "brand": "TechEase",
+    "price": 259.78,
+    "rating": 3.2,
+    "inStock": false,
+    "description": "High-quality item for travel use."
+  },
+  {
+    "id": 88,
+    "name": "Mechanical Keyboard",
+    "category": "Accessories",
+    "brand": "ZenDesk",
+    "price": 61.54,
+    "rating": 3.3,
+    "inStock": false,
+    "description": "Premium tool for travel use."
+  },
+  {
+    "id": 89,
+    "name": "Desk Pad",
+    "category": "Accessories",
+    "brand": "ZenDesk",
+    "price": 480.24,
+    "rating": 3.2,
+    "inStock": false,
+    "description": "Durable device for home use."
+  },
+  {
+    "id": 90,
+    "name": "Wireless Mouse",
+    "category": "Office Supplies",
+    "brand": "OfficeMate",
+    "price": 260.71,
+    "rating": 4.6,
+    "inStock": true,
+    "description": "Adjustable device for home use."
+  },
+  {
+    "id": 91,
+    "name": "Cable Management Kit",
+    "category": "Office Supplies",
+    "brand": "ErgoWorks",
+    "price": 139.5,
+    "rating": 3.4,
+    "inStock": true,
+    "description": "Ergonomic item for office use."
+  },
+  {
+    "id": 92,
+    "name": "Mini Whiteboard",
+    "category": "Furniture",
+    "brand": "ErgoWorks",
+    "price": 85.08,
+    "rating": 3.1,
+    "inStock": false,
+    "description": "Durable product for home use."
+  },
+  {
+    "id": 93,
+    "name": "Cable Management Kit",
+    "category": "Office Supplies",
+    "brand": "OfficeMate",
+    "price": 326.51,
+    "rating": 3.2,
+    "inStock": true,
+    "description": "Premium tool for home use."
+  },
+  {
+    "id": 94,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "brand": "OfficeMate",
+    "price": 71.09,
+    "rating": 5.0,
+    "inStock": true,
+    "description": "Adjustable product for office use."
+  },
+  {
+    "id": 95,
+    "name": "Mini Whiteboard",
+    "category": "Lighting",
+    "brand": "OfficeMate",
+    "price": 225.99,
+    "rating": 5.0,
+    "inStock": true,
+    "description": "High-quality tool for workspace use."
+  },
+  {
+    "id": 96,
+    "name": "Mini Whiteboard",
+    "category": "Furniture",
+    "brand": "WorkPro",
+    "price": 430.07,
+    "rating": 4.8,
+    "inStock": false,
+    "description": "Durable item for workspace use."
+  },
+  {
+    "id": 97,
+    "name": "Desk Pad",
+    "category": "Furniture",
+    "brand": "OfficeMate",
+    "price": 183.4,
+    "rating": 5.0,
+    "inStock": false,
+    "description": "Premium device for home use."
+  },
+  {
+    "id": 98,
+    "name": "Cable Management Kit",
+    "category": "Electronics",
+    "brand": "WorkPro",
+    "price": 435.63,
+    "rating": 3.8,
+    "inStock": true,
+    "description": "Compact device for workspace use."
+  },
+  {
+    "id": 99,
+    "name": "Desk Pad",
+    "category": "Electronics",
+    "brand": "SmartSpace",
+    "price": 58.61,
+    "rating": 4.8,
+    "inStock": true,
+    "description": "Durable tool for office use."
+  },
+  {
+    "id": 100,
+    "name": "Foot Rest",
+    "category": "Accessories",
+    "brand": "OfficeMate",
+    "price": 247.76,
+    "rating": 4.2,
+    "inStock": false,
+    "description": "Durable product for workspace use."
+  },
+  {
+    "id": 101,
+    "name": "Foot Rest",
+    "category": "Furniture",
+    "brand": "TechEase",
+    "price": 422.8,
+    "rating": 3.9,
+    "inStock": true,
+    "description": "High-quality item for office use."
+  },
+  {
+    "id": 102,
+    "name": "Laptop Stand",
+    "category": "Audio",
+    "brand": "OfficeMate",
+    "price": 432.09,
+    "rating": 4.0,
+    "inStock": true,
+    "description": "High-quality tool for travel use."
+  },
+  {
+    "id": 103,
+    "name": "Webcam HD",
+    "category": "Office Supplies",
+    "brand": "ComfortPlus",
+    "price": 382.36,
+    "rating": 3.5,
+    "inStock": true,
+    "description": "Premium tool for workspace use."
+  },
+  {
+    "id": 104,
+    "name": "Standing Desk Converter",
+    "category": "Furniture",
+    "brand": "OfficeMate",
+    "price": 66.39,
+    "rating": 3.3,
+    "inStock": false,
+    "description": "Compact product for workspace use."
+  },
+  {
+    "id": 105,
+    "name": "Noise Cancelling Headphones",
+    "category": "Office Supplies",
+    "brand": "ErgoWorks",
+    "price": 134.3,
+    "rating": 4.4,
+    "inStock": false,
+    "description": "Premium item for travel use."
+  },
+  {
+    "id": 106,
+    "name": "Cable Management Kit",
+    "category": "Office Supplies",
+    "brand": "TechEase",
+    "price": 34.64,
+    "rating": 4.2,
+    "inStock": false,
+    "description": "Premium item for office use."
+  },
+  {
+    "id": 107,
+    "name": "USB-C Hub",
+    "category": "Lighting",
+    "brand": "SmartSpace",
+    "price": 145.85,
+    "rating": 4.2,
+    "inStock": true,
+    "description": "Durable item for office use."
+  },
+  {
+    "id": 108,
+    "name": "Office Chair Mat",
+    "category": "Lighting",
+    "brand": "TechEase",
+    "price": 450.5,
+    "rating": 3.8,
+    "inStock": false,
+    "description": "High-quality tool for travel use."
+  },
+  {
+    "id": 109,
+    "name": "Wireless Charger",
+    "category": "Lighting",
+    "brand": "ZenDesk",
+    "price": 423.58,
+    "rating": 3.4,
+    "inStock": true,
+    "description": "Compact product for office use."
+  },
+  {
+    "id": 110,
+    "name": "Portable SSD",
+    "category": "Electronics",
+    "brand": "TechEase",
+    "price": 23.21,
+    "rating": 4.6,
+    "inStock": true,
+    "description": "High-quality accessory for office use."
+  },
+  {
+    "id": 111,
+    "name": "Portable SSD",
+    "category": "Accessories",
+    "brand": "TechEase",
+    "price": 213.5,
+    "rating": 4.8,
+    "inStock": true,
+    "description": "High-quality tool for home use."
+  },
+  {
+    "id": 112,
+    "name": "Portable SSD",
+    "category": "Office Supplies",
+    "brand": "SmartSpace",
+    "price": 292.75,
+    "rating": 4.7,
+    "inStock": true,
+    "description": "Durable device for travel use."
+  },
+  {
+    "id": 113,
+    "name": "Dual Monitor Arm",
+    "category": "Accessories",
+    "brand": "TechEase",
+    "price": 195.79,
+    "rating": 4.8,
+    "inStock": false,
+    "description": "Ergonomic device for workspace use."
+  },
+  {
+    "id": 114,
+    "name": "USB-C Hub",
+    "category": "Furniture",
+    "brand": "ComfortPlus",
+    "price": 231.82,
+    "rating": 3.7,
+    "inStock": false,
+    "description": "Adjustable accessory for home use."
+  },
+  {
+    "id": 115,
+    "name": "Desk Organizer",
+    "category": "Lighting",
+    "brand": "ErgoWorks",
+    "price": 107.02,
+    "rating": 4.1,
+    "inStock": false,
+    "description": "Compact device for home use."
+  },
+  {
+    "id": 116,
+    "name": "Foot Rest",
+    "category": "Electronics",
+    "brand": "ErgoWorks",
+    "price": 204.04,
+    "rating": 3.3,
+    "inStock": false,
+    "description": "High-quality item for workspace use."
+  },
+  {
+    "id": 117,
+    "name": "Office Chair Mat",
+    "category": "Lighting",
+    "brand": "ZenDesk",
+    "price": 494.3,
+    "rating": 4.1,
+    "inStock": true,
+    "description": "Compact accessory for travel use."
+  },
+  {
+    "id": 118,
+    "name": "Standing Desk Converter",
+    "category": "Electronics",
+    "brand": "WorkPro",
+    "price": 79.26,
+    "rating": 4.9,
+    "inStock": false,
+    "description": "Ergonomic product for travel use."
+  },
+  {
+    "id": 119,
+    "name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "brand": "TechEase",
+    "price": 232.28,
+    "rating": 4.6,
+    "inStock": true,
+    "description": "Compact product for office use."
+  },
+  {
+    "id": 120,
+    "name": "Portable SSD",
+    "category": "Electronics",
+    "brand": "ZenDesk",
+    "price": 202.97,
+    "rating": 4.1,
+    "inStock": true,
+    "description": "High-quality product for workspace use."
+  },
+  {
+    "id": 121,
+    "name": "Mini Whiteboard",
+    "category": "Lighting",
+    "brand": "TechEase",
+    "price": 27.48,
+    "rating": 4.2,
+    "inStock": true,
+    "description": "Adjustable tool for travel use."
+  },
+  {
+    "id": 122,
+    "name": "Wireless Charger",
+    "category": "Office Supplies",
+    "brand": "WorkPro",
+    "price": 467.6,
+    "rating": 4.7,
+    "inStock": false,
+    "description": "Premium tool for workspace use."
+  },
+  {
+    "id": 123,
+    "name": "Mechanical Keyboard",
+    "category": "Electronics",
+    "brand": "TechEase",
+    "price": 417.23,
+    "rating": 3.2,
+    "inStock": false,
+    "description": "High-quality device for office use."
+  },
+  {
+    "id": 124,
+    "name": "Smart Lamp",
+    "category": "Furniture",
+    "brand": "ZenDesk",
+    "price": 451.73,
+    "rating": 3.4,
+    "inStock": false,
+    "description": "Adjustable product for travel use."
+  },
+  {
+    "id": 125,
+    "name": "Webcam HD",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 114.03,
+    "rating": 3.6,
+    "inStock": false,
+    "description": "High-quality accessory for office use."
+  },
+  {
+    "id": 126,
+    "name": "Wireless Mouse",
+    "category": "Office Supplies",
+    "brand": "TechEase",
+    "price": 326.44,
+    "rating": 3.5,
+    "inStock": true,
+    "description": "Durable accessory for home use."
+  },
+  {
+    "id": 127,
+    "name": "Office Chair Mat",
+    "category": "Electronics",
+    "brand": "ErgoWorks",
+    "price": 136.95,
+    "rating": 3.9,
+    "inStock": false,
+    "description": "High-quality item for travel use."
+  },
+  {
+    "id": 128,
+    "name": "LED Monitor",
+    "category": "Audio",
+    "brand": "ComfortPlus",
+    "price": 135.16,
+    "rating": 3.9,
+    "inStock": false,
+    "description": "Adjustable item for travel use."
+  },
+  {
+    "id": 129,
+    "name": "Noise Cancelling Headphones",
+    "category": "Office Supplies",
+    "brand": "OfficeMate",
+    "price": 182.21,
+    "rating": 4.2,
+    "inStock": true,
+    "description": "Compact product for travel use."
+  },
+  {
+    "id": 130,
+    "name": "Foot Rest",
+    "category": "Furniture",
+    "brand": "ComfortPlus",
+    "price": 252.22,
+    "rating": 4.5,
+    "inStock": true,
+    "description": "Adjustable tool for travel use."
+  },
+  {
+    "id": 131,
+    "name": "LED Monitor",
+    "category": "Audio",
+    "brand": "TechEase",
+    "price": 480.75,
+    "rating": 4.9,
+    "inStock": true,
+    "description": "Adjustable item for workspace use."
+  },
+  {
+    "id": 132,
+    "name": "Standing Desk Converter",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 251.48,
+    "rating": 4.0,
+    "inStock": false,
+    "description": "Premium device for travel use."
+  },
+  {
+    "id": 133,
+    "name": "Office Chair Mat",
+    "category": "Accessories",
+    "brand": "ErgoWorks",
+    "price": 184.16,
+    "rating": 4.8,
+    "inStock": true,
+    "description": "Adjustable tool for office use."
+  },
+  {
+    "id": 134,
+    "name": "Cable Management Kit",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 237.66,
+    "rating": 4.9,
+    "inStock": true,
+    "description": "High-quality device for office use."
+  },
+  {
+    "id": 135,
+    "name": "Desk Pad",
+    "category": "Electronics",
+    "brand": "WorkPro",
+    "price": 60.34,
+    "rating": 5.0,
+    "inStock": true,
+    "description": "Adjustable accessory for home use."
+  },
+  {
+    "id": 136,
+    "name": "Cable Management Kit",
+    "category": "Lighting",
+    "brand": "WorkPro",
+    "price": 155.91,
+    "rating": 3.6,
+    "inStock": false,
+    "description": "Adjustable product for travel use."
+  },
+  {
+    "id": 137,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "brand": "OfficeMate",
+    "price": 265.83,
+    "rating": 4.8,
+    "inStock": true,
+    "description": "Compact accessory for workspace use."
+  },
+  {
+    "id": 138,
+    "name": "Desk Organizer",
+    "category": "Audio",
+    "brand": "WorkPro",
+    "price": 224.3,
+    "rating": 3.6,
+    "inStock": true,
+    "description": "Durable item for workspace use."
+  },
+  {
+    "id": 139,
+    "name": "Wireless Charger",
+    "category": "Office Supplies",
+    "brand": "ZenDesk",
+    "price": 118.58,
+    "rating": 4.4,
+    "inStock": false,
+    "description": "Durable product for travel use."
+  },
+  {
+    "id": 140,
+    "name": "Noise Cancelling Headphones",
+    "category": "Electronics",
+    "brand": "ComfortPlus",
+    "price": 373.28,
+    "rating": 4.0,
+    "inStock": true,
+    "description": "Durable accessory for travel use."
+  },
+  {
+    "id": 141,
+    "name": "Office Chair Mat",
+    "category": "Accessories",
+    "brand": "TechEase",
+    "price": 472.48,
+    "rating": 3.0,
+    "inStock": false,
+    "description": "Ergonomic device for travel use."
+  },
+  {
+    "id": 142,
+    "name": "Laptop Stand",
+    "category": "Electronics",
+    "brand": "SmartSpace",
+    "price": 361.39,
+    "rating": 4.6,
+    "inStock": true,
+    "description": "Adjustable tool for workspace use."
+  },
+  {
+    "id": 143,
+    "name": "USB-C Hub",
+    "category": "Office Supplies",
+    "brand": "ComfortPlus",
+    "price": 424.63,
+    "rating": 4.8,
+    "inStock": true,
+    "description": "Ergonomic device for office use."
+  },
+  {
+    "id": 144,
+    "name": "Noise Cancelling Headphones",
+    "category": "Furniture",
+    "brand": "ZenDesk",
+    "price": 375.69,
+    "rating": 4.1,
+    "inStock": false,
+    "description": "Durable tool for workspace use."
+  },
+  {
+    "id": 145,
+    "name": "Noise Cancelling Headphones",
+    "category": "Audio",
+    "brand": "SmartSpace",
+    "price": 59.58,
+    "rating": 4.5,
+    "inStock": false,
+    "description": "Compact tool for home use."
+  },
+  {
+    "id": 146,
+    "name": "LED Monitor",
+    "category": "Audio",
+    "brand": "ErgoWorks",
+    "price": 252.12,
+    "rating": 4.6,
+    "inStock": false,
+    "description": "Adjustable item for workspace use."
+  },
+  {
+    "id": 147,
+    "name": "Wireless Charger",
+    "category": "Furniture",
+    "brand": "ComfortPlus",
+    "price": 373.03,
+    "rating": 4.7,
+    "inStock": false,
+    "description": "Durable product for office use."
+  },
+  {
+    "id": 148,
+    "name": "Laptop Stand",
+    "category": "Office Supplies",
+    "brand": "OfficeMate",
+    "price": 380.5,
+    "rating": 3.4,
+    "inStock": false,
+    "description": "High-quality product for travel use."
+  },
+  {
+    "id": 149,
+    "name": "Mini Whiteboard",
+    "category": "Electronics",
+    "brand": "ComfortPlus",
+    "price": 345.56,
+    "rating": 4.3,
+    "inStock": false,
+    "description": "Durable accessory for workspace use."
+  },
+  {
+    "id": 150,
+    "name": "Cable Management Kit",
+    "category": "Furniture",
+    "brand": "ComfortPlus",
+    "price": 112.25,
+    "rating": 3.8,
+    "inStock": true,
+    "description": "Durable item for workspace use."
+  },
+  {
+    "id": 151,
+    "name": "Bluetooth Speaker",
+    "category": "Lighting",
+    "brand": "ComfortPlus",
+    "price": 412.84,
+    "rating": 4.5,
+    "inStock": false,
+    "description": "Compact device for office use."
+  },
+  {
+    "id": 152,
+    "name": "Standing Desk Converter",
+    "category": "Audio",
+    "brand": "ComfortPlus",
+    "price": 454.69,
+    "rating": 3.7,
+    "inStock": true,
+    "description": "Compact device for travel use."
+  },
+  {
+    "id": 153,
+    "name": "Mini Whiteboard",
+    "category": "Furniture",
+    "brand": "TechEase",
+    "price": 455.78,
+    "rating": 3.6,
+    "inStock": true,
+    "description": "Durable accessory for home use."
+  },
+  {
+    "id": 154,
+    "name": "Standing Desk Converter",
+    "category": "Audio",
+    "brand": "TechEase",
+    "price": 39.12,
+    "rating": 3.5,
+    "inStock": false,
+    "description": "Ergonomic device for workspace use."
+  },
+  {
+    "id": 155,
+    "name": "USB-C Hub",
+    "category": "Furniture",
+    "brand": "TechEase",
+    "price": 186.44,
+    "rating": 4.1,
+    "inStock": false,
+    "description": "Ergonomic accessory for workspace use."
+  },
+  {
+    "id": 156,
+    "name": "Cable Management Kit",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 404.39,
+    "rating": 3.4,
+    "inStock": false,
+    "description": "Adjustable device for workspace use."
+  },
+  {
+    "id": 157,
+    "name": "Office Chair Mat",
+    "category": "Electronics",
+    "brand": "OfficeMate",
+    "price": 233.3,
+    "rating": 4.8,
+    "inStock": false,
+    "description": "Adjustable accessory for home use."
+  },
+  {
+    "id": 158,
+    "name": "Laptop Stand",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 78.61,
+    "rating": 3.7,
+    "inStock": true,
+    "description": "Durable device for workspace use."
+  },
+  {
+    "id": 159,
+    "name": "Ergonomic Chair",
+    "category": "Furniture",
+    "brand": "ErgoWorks",
+    "price": 435.03,
+    "rating": 4.3,
+    "inStock": true,
+    "description": "Ergonomic tool for workspace use."
+  },
+  {
+    "id": 160,
+    "name": "Office Chair Mat",
+    "category": "Office Supplies",
+    "brand": "ZenDesk",
+    "price": 180.81,
+    "rating": 3.0,
+    "inStock": false,
+    "description": "Durable product for office use."
+  },
+  {
+    "id": 161,
+    "name": "Bluetooth Speaker",
+    "category": "Office Supplies",
+    "brand": "OfficeMate",
+    "price": 308.98,
+    "rating": 3.7,
+    "inStock": true,
+    "description": "High-quality accessory for travel use."
+  },
+  {
+    "id": 162,
+    "name": "Desk Organizer",
+    "category": "Lighting",
+    "brand": "SmartSpace",
+    "price": 448.35,
+    "rating": 3.7,
+    "inStock": true,
+    "description": "Compact item for home use."
+  },
+  {
+    "id": 163,
+    "name": "Mechanical Keyboard",
+    "category": "Lighting",
+    "brand": "ErgoWorks",
+    "price": 255.95,
+    "rating": 3.0,
+    "inStock": false,
+    "description": "Premium accessory for workspace use."
+  },
+  {
+    "id": 164,
+    "name": "Smart Lamp",
+    "category": "Accessories",
+    "brand": "ComfortPlus",
+    "price": 124.62,
+    "rating": 4.1,
+    "inStock": true,
+    "description": "Ergonomic product for travel use."
+  },
+  {
+    "id": 165,
+    "name": "Wireless Mouse",
+    "category": "Office Supplies",
+    "brand": "OfficeMate",
+    "price": 390.64,
+    "rating": 3.3,
+    "inStock": false,
+    "description": "High-quality product for home use."
+  },
+  {
+    "id": 166,
+    "name": "Office Chair Mat",
+    "category": "Audio",
+    "brand": "OfficeMate",
+    "price": 413.51,
+    "rating": 4.3,
+    "inStock": true,
+    "description": "Compact device for travel use."
+  },
+  {
+    "id": 167,
+    "name": "Office Chair Mat",
+    "category": "Furniture",
+    "brand": "ErgoWorks",
+    "price": 97.05,
+    "rating": 3.0,
+    "inStock": false,
+    "description": "Compact accessory for workspace use."
+  },
+  {
+    "id": 168,
+    "name": "Cable Management Kit",
+    "category": "Lighting",
+    "brand": "ComfortPlus",
+    "price": 126.51,
+    "rating": 3.6,
+    "inStock": true,
+    "description": "Durable product for workspace use."
+  },
+  {
+    "id": 169,
+    "name": "Dual Monitor Arm",
+    "category": "Accessories",
+    "brand": "ComfortPlus",
+    "price": 61.37,
+    "rating": 3.3,
+    "inStock": false,
+    "description": "Durable product for workspace use."
+  },
+  {
+    "id": 170,
+    "name": "Wireless Charger",
+    "category": "Electronics",
+    "brand": "TechEase",
+    "price": 104.42,
+    "rating": 5.0,
+    "inStock": true,
+    "description": "Ergonomic device for office use."
+  },
+  {
+    "id": 171,
+    "name": "Webcam HD",
+    "category": "Lighting",
+    "brand": "ZenDesk",
+    "price": 408.82,
+    "rating": 3.3,
+    "inStock": false,
+    "description": "Ergonomic product for workspace use."
+  },
+  {
+    "id": 172,
+    "name": "Noise Cancelling Headphones",
+    "category": "Office Supplies",
+    "brand": "ComfortPlus",
+    "price": 110.43,
+    "rating": 3.4,
+    "inStock": true,
+    "description": "Ergonomic device for home use."
+  },
+  {
+    "id": 173,
+    "name": "Mechanical Keyboard",
+    "category": "Lighting",
+    "brand": "TechEase",
+    "price": 200.36,
+    "rating": 3.2,
+    "inStock": true,
+    "description": "Adjustable item for workspace use."
+  },
+  {
+    "id": 174,
+    "name": "Webcam HD",
+    "category": "Accessories",
+    "brand": "OfficeMate",
+    "price": 279.84,
+    "rating": 3.9,
+    "inStock": true,
+    "description": "Durable accessory for home use."
+  },
+  {
+    "id": 175,
+    "name": "Foot Rest",
+    "category": "Audio",
+    "brand": "ZenDesk",
+    "price": 204.41,
+    "rating": 4.2,
+    "inStock": true,
+    "description": "Adjustable device for home use."
+  },
+  {
+    "id": 176,
+    "name": "Wireless Charger",
+    "category": "Furniture",
+    "brand": "ZenDesk",
+    "price": 282.03,
+    "rating": 4.3,
+    "inStock": true,
+    "description": "Durable product for workspace use."
+  },
+  {
+    "id": 177,
+    "name": "Smart Lamp",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 164.2,
+    "rating": 3.7,
+    "inStock": false,
+    "description": "Adjustable product for travel use."
+  },
+  {
+    "id": 178,
+    "name": "Bluetooth Speaker",
+    "category": "Accessories",
+    "brand": "SmartSpace",
+    "price": 303.84,
+    "rating": 4.2,
+    "inStock": true,
+    "description": "Compact accessory for home use."
+  },
+  {
+    "id": 179,
+    "name": "Office Chair Mat",
+    "category": "Office Supplies",
+    "brand": "ComfortPlus",
+    "price": 463.19,
+    "rating": 3.1,
+    "inStock": false,
+    "description": "Durable tool for travel use."
+  },
+  {
+    "id": 180,
+    "name": "Mini Whiteboard",
+    "category": "Audio",
+    "brand": "OfficeMate",
+    "price": 44.57,
+    "rating": 3.2,
+    "inStock": true,
+    "description": "High-quality device for travel use."
+  },
+  {
+    "id": 181,
+    "name": "Desk Pad",
+    "category": "Electronics",
+    "brand": "OfficeMate",
+    "price": 250.54,
+    "rating": 4.7,
+    "inStock": true,
+    "description": "Premium device for workspace use."
+  },
+  {
+    "id": 182,
+    "name": "Cable Management Kit",
+    "category": "Audio",
+    "brand": "SmartSpace",
+    "price": 433.33,
+    "rating": 4.2,
+    "inStock": false,
+    "description": "Durable tool for office use."
+  },
+  {
+    "id": 183,
+    "name": "Ergonomic Chair",
+    "category": "Furniture",
+    "brand": "ComfortPlus",
+    "price": 238.9,
+    "rating": 4.0,
+    "inStock": true,
+    "description": "Premium tool for travel use."
+  },
+  {
+    "id": 184,
+    "name": "Laptop Stand",
+    "category": "Lighting",
+    "brand": "ZenDesk",
+    "price": 312.11,
+    "rating": 4.6,
+    "inStock": true,
+    "description": "Adjustable item for home use."
+  },
+  {
+    "id": 185,
+    "name": "Wireless Charger",
+    "category": "Electronics",
+    "brand": "WorkPro",
+    "price": 91.68,
+    "rating": 3.8,
+    "inStock": false,
+    "description": "Premium product for home use."
+  },
+  {
+    "id": 186,
+    "name": "Cable Management Kit",
+    "category": "Office Supplies",
+    "brand": "OfficeMate",
+    "price": 481.67,
+    "rating": 3.8,
+    "inStock": true,
+    "description": "Ergonomic item for home use."
+  },
+  {
+    "id": 187,
+    "name": "Office Chair Mat",
+    "category": "Audio",
+    "brand": "OfficeMate",
+    "price": 216.19,
+    "rating": 3.0,
+    "inStock": true,
+    "description": "High-quality product for home use."
+  },
+  {
+    "id": 188,
+    "name": "Mechanical Keyboard",
+    "category": "Accessories",
+    "brand": "ZenDesk",
+    "price": 83.53,
+    "rating": 4.4,
+    "inStock": false,
+    "description": "Ergonomic item for travel use."
+  },
+  {
+    "id": 189,
+    "name": "Smart Lamp",
+    "category": "Audio",
+    "brand": "ErgoWorks",
+    "price": 385.79,
+    "rating": 3.3,
+    "inStock": false,
+    "description": "Durable product for office use."
+  },
+  {
+    "id": 190,
+    "name": "Ergonomic Chair",
+    "category": "Electronics",
+    "brand": "SmartSpace",
+    "price": 104.57,
+    "rating": 3.7,
+    "inStock": false,
+    "description": "Ergonomic device for home use."
+  },
+  {
+    "id": 191,
+    "name": "USB-C Hub",
+    "category": "Electronics",
+    "brand": "ZenDesk",
+    "price": 454.96,
+    "rating": 3.1,
+    "inStock": true,
+    "description": "Durable tool for home use."
+  },
+  {
+    "id": 192,
+    "name": "Smart Lamp",
+    "category": "Lighting",
+    "brand": "ErgoWorks",
+    "price": 119.23,
+    "rating": 4.6,
+    "inStock": true,
+    "description": "Premium device for office use."
+  },
+  {
+    "id": 193,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "brand": "WorkPro",
+    "price": 195.29,
+    "rating": 3.8,
+    "inStock": true,
+    "description": "Compact tool for home use."
+  },
+  {
+    "id": 194,
+    "name": "Ergonomic Chair",
+    "category": "Accessories",
+    "brand": "WorkPro",
+    "price": 261.63,
+    "rating": 3.4,
+    "inStock": true,
+    "description": "High-quality product for home use."
+  },
+  {
+    "id": 195,
+    "name": "USB-C Hub",
+    "category": "Accessories",
+    "brand": "WorkPro",
+    "price": 141.18,
+    "rating": 4.0,
+    "inStock": true,
+    "description": "Durable device for office use."
+  },
+  {
+    "id": 196,
+    "name": "Noise Cancelling Headphones",
+    "category": "Office Supplies",
+    "brand": "WorkPro",
+    "price": 232.64,
+    "rating": 3.3,
+    "inStock": false,
+    "description": "Compact item for travel use."
+  },
+  {
+    "id": 197,
+    "name": "Noise Cancelling Headphones",
+    "category": "Lighting",
+    "brand": "ErgoWorks",
+    "price": 108.43,
+    "rating": 5.0,
+    "inStock": true,
+    "description": "Compact product for workspace use."
+  },
+  {
+    "id": 198,
+    "name": "LED Monitor",
+    "category": "Lighting",
+    "brand": "ZenDesk",
+    "price": 130.2,
+    "rating": 3.9,
+    "inStock": true,
+    "description": "Durable device for home use."
+  },
+  {
+    "id": 199,
+    "name": "Portable SSD",
+    "category": "Furniture",
+    "brand": "ComfortPlus",
+    "price": 399.93,
+    "rating": 3.8,
+    "inStock": false,
+    "description": "High-quality accessory for office use."
+  },
+  {
+    "id": 200,
+    "name": "LED Monitor",
+    "category": "Furniture",
+    "brand": "ComfortPlus",
+    "price": 164.56,
+    "rating": 3.5,
+    "inStock": false,
+    "description": "Premium device for workspace use."
+  }
+]
