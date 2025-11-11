@@ -3,6 +3,10 @@ export interface DiffRequest {
   updated: Record<string, any>;
 }
 
+export interface CacheRequestParams {
+  key: string;
+}
+
 export interface DiffResponse {
   differences: Array<{
     path: string;
@@ -15,8 +19,33 @@ export interface DiffResponse {
     removed: number;
     modified: number;
   };
+  success: boolean;
+  cacheKey: string;
+  timestamp: Date;
 }
 
+export interface CacheResponse {
+  original: any;
+  updated: any;
+  differences: Array<{
+    path: string;
+    type: "added" | "removed" | "modified";
+    oldValue?: any;
+    newValue?: any;
+  }>;
+  summary: {
+    added: number;
+    removed: number;
+    modified: number;
+  };
+  success: boolean;
+  cacheKey: string;
+  timestamp: Date;
+}
+export interface DiffHistory {
+  cacheKey: string;
+  timestamp: Date;
+}
 export interface SearchParams {
   query?: string;
   filters?: Record<string, any>;
@@ -33,6 +62,7 @@ export interface Product {
   brand?: string;
   rating?: number;
   inStock?: boolean;
+  imageUrl?: string;
   [key: string]: any;
 }
 

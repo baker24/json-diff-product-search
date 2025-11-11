@@ -9,6 +9,7 @@
           type="text"
           placeholder="Search products..."
           class="search-input"
+          @keydown.enter="() => handleSearch(true)"
         />
         <button @click="() => handleSearch(true)" :disabled="loading" class="btn-search">
           {{ loading ? "Searching..." : "Search" }}
@@ -24,10 +25,14 @@
             <select v-model="filters.category">
               <option value="">All Categories</option>
               <option value="electronics">Electronics</option>
-              <option value="clothing">Clothing</option>
-              <option value="books">Books</option>
-              <option value="home">Home & Garden</option>
-              <option value="sports">Sports</option>
+              <option value="clothing & accessories">Clothing & Accessories</option>
+              <option value="tools & home improvement">Tools & Home Improvement</option>
+              <option value="toys & games">Toys & Games</option>
+              <option value="beauty & personal care">Beauty & Personal Care</option>
+              <option value="home & kitchen">Home & Kitchen</option>
+              <option value="lighting">Lighting</option>
+              <option value="office supplies">Office Supplies</option>
+              <option value="furniture">Furniture</option>
             </select>
           </div>
 
@@ -80,6 +85,7 @@
 
       <div v-else class="products-grid">
         <div v-for="product in searchResult.results" :key="product.id" class="product-card">
+          <img v-if="product.imageUrl" class="product-image" v-lazy="product.imageUrl" />
           <div class="product-header">
             <h3>{{ product.name }}</h3>
             <span v-if="product.price" class="product-price">
@@ -130,24 +136,32 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, reactive } from "vue";
+import { ref, computed, reactive, watch, onMounted } from "vue";
 import { api } from "../services/api";
 import type { SearchResponse } from "../types";
+import { useRouter, useRoute } from "vue-router";
 
-const searchQuery = ref("");
+const router = useRouter();
+const route = useRoute();
+
+const searchQuery = ref((route.query.search as string) || "");
 const loading = ref(false);
 const error = ref("");
 const searchResult = ref<SearchResponse | null>(null);
-const currentPage = ref(1);
+const currentPage = ref(route.query.page ? parseInt(route.query.page as string) : 1);
 const currentLimit = ref(20);
 
 const filters = reactive({
-  category: "",
-  minPrice: null as number | null,
-  maxPrice: null as number | null,
-  minRating: null as number | null,
-  brand: "",
-  inStock: false,
+  category: (route.query.category as string) || "",
+  minPrice: route.query.minPrice ? parseFloat(route.query.minPrice as string) : null,
+  maxPrice: route.query.maxPrice ? parseFloat(route.query.maxPrice as string) : null,
+  minRating: route.query.minRating ? parseFloat(route.query.minRating as string) : null,
+  brand: (route.query.brand as string) || "",
+  inStock: route.query.inStock == "true",
+});
+
+onMounted(() => {
+  handleSearch(true);
 });
 
 const totalPages = computed(() => {
@@ -193,14 +207,43 @@ const handleSearch = async (resetPage = true) => {
   error.value = "";
   loading.value = true;
 
+  let queryParams = {};
+  if (searchQuery.value) {
+    queryParams = { search: searchQuery.value };
+  }
+  if (filters.category) {
+    queryParams = { ...queryParams, category: filters.category };
+  }
+  if (filters.minPrice) {
+    queryParams = { ...queryParams, minPrice: filters.minPrice };
+  }
+  if (filters.maxPrice) {
+    queryParams = { ...queryParams, maxPrice: filters.maxPrice };
+  }
+  if (filters.minRating) {
+    queryParams = { ...queryParams, minRating: filters.minRating };
+  }
+  if (filters.brand) {
+    queryParams = { ...queryParams, brand: filters.brand };
+  }
+  if (filters.inStock) {
+    queryParams = { ...queryParams, inStock: filters.inStock ? "true" : "false" };
+  }
+  queryParams = { ...queryParams, page: currentPage.value };
+
+  router.push({
+    path: "/search",
+    query: queryParams,
+  });
+
   try {
     const result = await api.searchProducts({
-      query: searchQuery.value,
+      query: searchQuery.value || "",
       filters: buildFilters(),
       offset: (currentPage.value - 1) * currentLimit.value,
       limit: currentLimit.value,
     });
-    // console.log("result", result);
+    console.log("result", result);
     searchResult.value = result;
   } catch (err: any) {
     error.value = err.response?.data?.message || err.message || "Failed to search products";
@@ -420,6 +463,10 @@ h1 {
   transform: translateY(-2px);
 }
 
+.product-image {
+  width: 100%;
+  border-radius: 0.5rem;
+}
 .product-header {
   display: flex;
   justify-content: space-between;

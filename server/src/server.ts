@@ -14,6 +14,7 @@ import {
   FilterOptions,
 } from "./types";
 import dotenv from "dotenv";
+import { samples } from "./sample";
 dotenv.config();
 
 const app: Application = express();
@@ -133,6 +134,13 @@ app.post("/api/diff", (req: Request<{}, {}, DiffRequestBody>, res: Response) => 
       updated,
       differences,
       timestamp: new Date(),
+      cacheKey,
+      summary: {
+        total: differences.length,
+        added: differences.filter((d) => d.type === "added").length,
+        removed: differences.filter((d) => d.type === "removed").length,
+        modified: differences.filter((d) => d.type === "modified").length,
+      },
     };
     cache.set(cacheKey, cachedData);
 
@@ -140,6 +148,7 @@ app.post("/api/diff", (req: Request<{}, {}, DiffRequestBody>, res: Response) => 
       success: true,
       cacheKey,
       differences,
+      timestamp: new Date(),
       summary: {
         total: differences.length,
         added: differences.filter((d) => d.type === "added").length,
@@ -160,7 +169,21 @@ app.get("/api/diff/:key", (req: Request<{ key: string }>, res: Response) => {
   if (!data) {
     return res.status(404).json({ error: "Diff not found or expired" });
   }
-  res.json(data);
+  const response = {
+    original: data.original,
+    updated: data.updated,
+    success: true,
+    cacheKey: req.params.key,
+    differences: data.differences,
+    timestamp: data.timestamp,
+    summary: {
+      total: data.differences.length,
+      added: data.differences.filter((d) => d.type === "added").length,
+      removed: data.differences.filter((d) => d.type === "removed").length,
+      modified: data.differences.filter((d) => d.type === "modified").length,
+    },
+  };
+  res.json(response);
 });
 
 // ==================== PART 2: SEARCH API ====================
@@ -171,7 +194,7 @@ async function initializeSearch(): Promise<void> {
     const health = await meiliClient.health();
     console.log("✅ Connected to MeiliSearch Cloud:", health);
 
-    const index: Index<Product> = meiliClient.index("products");
+    // const index: Index<Product> = meiliClient.index("products");
 
     // // Add documents
     // await index.addDocuments(sampleProducts, { primaryKey: "id" });
@@ -185,6 +208,11 @@ async function initializeSearch(): Promise<void> {
     // // Configure sortable attributes
     // await index.updateSortableAttributes(["price", "rating", "name"]);
 
+    const categoryMap = new Map<string, any>();
+    samples.forEach((_sample) => {
+      categoryMap.set(_sample.category, true);
+    });
+    console.log(Array.from(categoryMap.keys()));
     console.log("MeiliSearch index initialized successfully");
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : "Unknown error";
@@ -203,7 +231,7 @@ app.get("/api/search", async (req: Request<{}, {}, {}, SearchRequestBody>, res: 
     const filterParts: string[] = [];
 
     if (filters.category) {
-      filterParts.push(`category = ${filters.category}`);
+      filterParts.push(`category = '${filters.category}'`);
     }
 
     if (filters.brand) {

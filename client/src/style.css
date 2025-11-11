@@ -24,3 +24,25 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
+.lazy-loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.lazy-loaded {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lazy-error {
+  opacity: 0.5;
+}

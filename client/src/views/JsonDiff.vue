@@ -1,7 +1,35 @@
 <template>
   <div class="json-diff-container">
     <h1>JSON Diff Comparison</h1>
-
+    <div class="history-section">
+      <div v-for="diff in diffHistory" :key="diff.cacheKey" class="history-item">
+        <button
+          @click="clickHistory(diff)"
+          :class="['btn-history', diff.cacheKey == diffResult?.cacheKey ? 'selected' : '']"
+        >
+          {{ new Date(diff.timestamp).toLocaleString() }}
+          <span @click.stop.prevent="removeHistory(diff)" class="btn-history-remove">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <button v-if="diffHistory.length > 0" @click="clearHistory" class="btn-history-clear">
+        Clear All
+      </button>
+    </div>
     <div class="input-section">
       <div class="json-input">
         <h3>Original JSON</h3>
@@ -51,6 +79,20 @@
         </div>
       </div>
 
+      <div v-if="diffResult.differences.length > 0" class="full-json-view">
+        <h2>Complete JSON Comparison</h2>
+        <div class="json-comparison">
+          <div class="json-panel">
+            <h3>Original JSON</h3>
+            <pre class="json-display" v-html="renderFullJson('original')"></pre>
+          </div>
+          <div class="json-panel">
+            <h3>Compared JSON</h3>
+            <pre class="json-display" v-html="renderFullJson('updated')"></pre>
+          </div>
+        </div>
+      </div>
+
       <div v-if="diffResult.differences.length === 0" class="no-changes">
         No differences found. The JSON objects are identical.
       </div>
@@ -71,30 +113,16 @@
               <strong>Old:</strong>
               <pre
                 class="json-display"
-                v-html="renderDiffValue(diff.oldValue, diff.newValue, 'old', diff.type)"
+                v-html="renderDiffValue(diff.oldValue, diff.newValue, diff.type)"
               ></pre>
             </div>
             <div v-if="diff.type === 'added' || diff.type === 'modified'" class="new-value">
               <strong>New:</strong>
               <pre
                 class="json-display"
-                v-html="renderDiffValue(diff.newValue, diff.oldValue, 'new', diff.type)"
+                v-html="renderDiffValue(diff.newValue, diff.oldValue, diff.type)"
               ></pre>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div v-if="diffResult.differences.length > 0" class="full-json-view">
-        <h2>Complete JSON Comparison</h2>
-        <div class="json-comparison">
-          <div class="json-panel">
-            <h3>Original JSON</h3>
-            <pre class="json-display" v-html="renderFullJson('original')"></pre>
-          </div>
-          <div class="json-panel">
-            <h3>Compared JSON</h3>
-            <pre class="json-display" v-html="renderFullJson('updated')"></pre>
           </div>
         </div>
       </div>
@@ -103,10 +131,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
 import { api } from "../services/api";
-import type { DiffResponse } from "../types";
+import type { DiffResponse, DiffHistory } from "../types";
 import JSON5 from "json5";
+import _ from "lodash";
+
+const router = useRouter();
+const route = useRoute();
 
 const originalJson = ref("");
 const updatedJson = ref("");
@@ -115,6 +148,25 @@ const updatedError = ref("");
 const apiError = ref("");
 const loading = ref(false);
 const diffResult = ref<DiffResponse | null>(null);
+const diffHistory = ref<DiffHistory[]>([]);
+
+onMounted(() => {
+  const diffCachedOnStorage = localStorage.getItem("diff-cached");
+  if (diffCachedOnStorage) {
+    diffHistory.value = JSON.parse(diffCachedOnStorage);
+  }
+  if (route.query.cache) {
+    clickHistory({ cacheKey: route.query.cache as string, timestamp: new Date() });
+  }
+});
+
+watch(
+  diffHistory,
+  (newValue) => {
+    localStorage.setItem("diff-cached", JSON.stringify(newValue));
+  },
+  { deep: true }
+);
 
 const validateJson = (jsonString: string): { valid: boolean; data?: any; error?: string } => {
   try {
@@ -140,12 +192,7 @@ const escapeHtml = (text: string): string => {
   return div.innerHTML;
 };
 
-const renderDiffValue = (
-  value: any,
-  compareValue: any,
-  type: "old" | "new",
-  diffType: string
-): string => {
+const renderDiffValue = (value: any, compareValue: any, diffType: string): string => {
   if (diffType !== "modified") {
     return escapeHtml(formatValue(value));
   }
@@ -160,6 +207,18 @@ const renderDiffValue = (
 
   // For objects, just escape and return
   return escapeHtml(valueStr);
+};
+
+const addToDiffHistory = (result: DiffResponse) => {
+  const diffMap = new Map<string, DiffHistory>();
+  diffHistory.value.forEach((_value) => {
+    diffMap.set(_value.cacheKey, _value);
+  });
+  diffMap.set(result.cacheKey, { cacheKey: result.cacheKey, timestamp: result.timestamp });
+
+  diffHistory.value = Array.from(diffMap.values()).sort(
+    (_diff1, _diff2) => Number(_diff1.timestamp) - Number(_diff2.timestamp)
+  );
 };
 
 const compareDiff = async () => {
@@ -188,13 +247,67 @@ const compareDiff = async () => {
       original: originalValidation.data,
       updated: updatedValidation.data,
     });
-    console.log(result);
+
     diffResult.value = result;
+    if (result.success && result.cacheKey) {
+      router.push({
+        path: "/diff",
+        query: { cache: result.cacheKey },
+      });
+      addToDiffHistory(result);
+    }
   } catch (error: any) {
-    apiError.value = error.response?.data?.message || error.message || "Failed to compare JSON";
+    apiError.value = error.response?.data?.error || error.message || "Failed to compare JSON";
   } finally {
     loading.value = false;
   }
+};
+
+const clickHistory = async (diff: DiffHistory) => {
+  originalError.value = "";
+  updatedError.value = "";
+  apiError.value = "";
+  diffResult.value = null;
+
+  router.push({
+    path: "/diff",
+    query: { cache: diff.cacheKey },
+  });
+
+  loading.value = true;
+  try {
+    const result = await api.getCache({ key: diff.cacheKey });
+
+    if (result.success && result.cacheKey) {
+      diffResult.value = result;
+      originalJson.value = JSON5.stringify(result.original, null, 4);
+      updatedJson.value = JSON5.stringify(result.updated, null, 4);
+      addToDiffHistory(result);
+    }
+  } catch (error: any) {
+    console.error(error);
+    apiError.value = error.response?.data?.error || error.message || "Failed to compare JSON";
+  } finally {
+    loading.value = false;
+  }
+};
+
+const clearHistory = () => {
+  diffHistory.value = [];
+  router.push({
+    path: "/diff",
+    query: {},
+  });
+  originalJson.value = "";
+  updatedJson.value = "";
+  originalError.value = "";
+  updatedError.value = "";
+  apiError.value = "";
+  diffResult.value = null;
+};
+
+const removeHistory = (diff: DiffHistory) => {
+  diffHistory.value = diffHistory.value.filter((_diff) => _diff.cacheKey != diff.cacheKey);
 };
 
 const clearAll = () => {
@@ -204,6 +317,10 @@ const clearAll = () => {
   updatedError.value = "";
   apiError.value = "";
   diffResult.value = null;
+  router.push({
+    path: "/diff",
+    query: {},
+  });
 };
 
 const getCharLevelDiff = (str1: string, str2: string): string => {
@@ -230,7 +347,7 @@ const getCharLevelDiff = (str1: string, str2: string): string => {
 };
 
 const highlightJsonValue = (
-  parsed: string,
+  jsonParsed: any,
   differences: Array<{
     path: string;
     type: "added" | "removed" | "modified";
@@ -242,7 +359,7 @@ const highlightJsonValue = (
   updatedJson: any
 ): string => {
   if (differences.length === 0) {
-    return escapeHtml(parsed);
+    return escapeHtml(jsonParsed);
   }
 
   // Create a map of paths to their diff info
@@ -251,17 +368,9 @@ const highlightJsonValue = (
     diffMap.set(diff.path, { type: diff.type, oldValue: diff.oldValue, newValue: diff.newValue });
   });
 
-  const addedMap = new Map<string, { value: any }>();
-  const removedMap = new Map<string, { value: any }>();
-  differences
-    .filter((diff) => diff.type === "added" || diff.type === "removed")
-    .forEach((diff) => {
-      if (diff.type === "added") {
-        addedMap.set(diff.path, { value: diff.newValue });
-      } else {
-        removedMap.set(diff.path, { value: diff.newValue });
-      }
-    });
+  const mergedJson = isOriginal
+    ? _.merge(updatedJson, originalJson)
+    : _.merge(originalJson, updatedJson);
 
   const highlightObject = (obj: any, currentPath: string = "", indent: number = 0): string => {
     const indentStr = "  ".repeat(indent);
@@ -271,6 +380,8 @@ const highlightJsonValue = (
 
     const type = typeof obj;
     const diff = diffMap.get(currentPath);
+    const isHighlighted =
+      diff && ((diff.type === "removed" && isOriginal) || (diff.type === "added" && !isOriginal));
 
     if (type === "string") {
       if (diff && diff.type === "modified") {
@@ -279,7 +390,11 @@ const highlightJsonValue = (
         return `<span class="json-string">${highlighted}</span>`;
       } else if (diff && (diff.type === "added" || diff.type === "removed")) {
         const escaped = escapeHtml(obj);
-        return `<span class="json-highlighted">${escaped}</span>`;
+        if (isHighlighted) {
+          return `<span class="json-highlighted">${escaped}</span>`;
+        } else {
+          return `<span class="json-removed">${escaped}</span>`;
+        }
       }
 
       return `<span class="json-string">${escapeHtml(obj)}</span>`;
@@ -294,15 +409,21 @@ const highlightJsonValue = (
         return `<span class="json-${type}">${highlighted}</span>`;
       } else if (diff && (diff.type === "added" || diff.type === "removed")) {
         const escaped = escapeHtml(strValue);
-        return `<span class="json-highlighted">${escaped}</span>`;
+        if (isHighlighted) {
+          return `<span class="json-highlighted">${escaped}</span>`;
+        } else {
+          return `<span class="json-removed">${escaped}</span>`;
+        }
       }
-
       return `<span class="json-${type}">${escapeHtml(strValue)}</span>`;
     }
 
     if (Array.isArray(obj)) {
       if (diff && (diff.type === "added" || diff.type === "removed")) {
-        let result = `<span class="json-highlighted">[\n`;
+        let result = isHighlighted
+          ? `<span class="json-highlighted">[\n`
+          : `<span class="json-removed">[\n`;
+
         obj.forEach((item, index) => {
           const itemPath = `${currentPath}[${index}]`;
           result += indentStr + "  " + highlightObject(item, itemPath, indent + 1);
@@ -331,18 +452,13 @@ const highlightJsonValue = (
         const keys = Object.keys(obj);
         if (keys.length === 0) return "{}";
 
-        let result = `<span class="json-highlighted">[{\n`;
+        let result = isHighlighted
+          ? `<span class="json-highlighted">{\n`
+          : `<span class="json-removed">{\n`;
         keys.forEach((key, index) => {
           const newPath = currentPath ? `${currentPath}.${key}` : key;
-          const keyDiff = diffMap.get(newPath);
-
-          // Only highlight key if it's an added/removed property, not modified value
-          const keyStr =
-            keyDiff && (keyDiff.type === "added" || keyDiff.type === "removed")
-              ? `<span class="json-highlighted">"${escapeHtml(key)}"</span>`
-              : `<span class="json-key">"${escapeHtml(key)}"</span>`;
-
-          result += indentStr + `  ${keyStr}: ${highlightObject(obj[key], newPath, indent + 1)}`;
+          result +=
+            indentStr + `  ${escapeHtml(key)}: ${highlightObject(obj[key], newPath, indent + 1)}`;
           if (index < keys.length - 1) result += ",";
           result += "\n";
         });
@@ -357,13 +473,23 @@ const highlightJsonValue = (
           const newPath = currentPath ? `${currentPath}.${key}` : key;
           const keyDiff = diffMap.get(newPath);
 
-          // Only highlight key if it's an added/removed property, not modified value
-          const keyStr =
-            keyDiff && (keyDiff.type === "added" || keyDiff.type === "removed")
-              ? `<span class="json-highlighted">"${escapeHtml(key)}"</span>`
-              : `<span class="json-key">"${escapeHtml(key)}"</span>`;
+          const isKeyHighlited =
+            keyDiff &&
+            ((keyDiff.type === "removed" && isOriginal) ||
+              (keyDiff.type === "added" && !isOriginal));
 
-          result += indentStr + `  ${keyStr}: ${highlightObject(obj[key], newPath, indent + 1)}`;
+          const isKeyRemoved =
+            keyDiff &&
+            ((keyDiff.type === "added" && isOriginal) ||
+              (keyDiff.type === "removed" && !isOriginal));
+
+          const keyStr = isKeyHighlited
+            ? `<span class="json-highlighted">"${escapeHtml(key)}":</span>`
+            : isKeyRemoved
+            ? `<span class="json-removed">"${escapeHtml(key)}":</span>`
+            : `<span class="json-key">"${escapeHtml(key)}":</span>`;
+
+          result += indentStr + `  ${keyStr} ${highlightObject(obj[key], newPath, indent + 1)}`;
           if (index < keys.length - 1) result += ",";
           result += "\n";
         });
@@ -375,7 +501,7 @@ const highlightJsonValue = (
     return escapeHtml(String(obj));
   };
 
-  return highlightObject(parsed);
+  return highlightObject(mergedJson);
 };
 
 const renderFullJson = (type: "original" | "updated"): string => {
@@ -413,6 +539,13 @@ h1 {
   margin-bottom: 20px;
 }
 
+.history-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
 .json-input {
   display: flex;
   flex-direction: column;
@@ -474,6 +607,59 @@ button {
   cursor: not-allowed;
 }
 
+/* history buttons */
+.btn-history {
+  background-color: #3498db;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+  position: relative;
+}
+
+.btn-history:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.btn-history:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.btn-history.selected {
+  border: 1px solid #bd1010;
+}
+
+.btn-history-clear {
+  background-color: #95a5a6;
+  color: white;
+  padding: 8px;
+  margin: 8px;
+}
+
+.btn-history-remove {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #e8fdff;
+  color: #888;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  transition: color 0.2s;
+  border: solid 1px #d2e4e6;
+}
+
+.btn-history-remove:hover {
+  color: #e74c3c;
+}
+
+/* Clear Button */
 .btn-clear {
   background-color: #95a5a6;
   color: white;
@@ -685,6 +871,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .json-panel {
@@ -746,6 +933,24 @@ button {
   border: 1px solid #ef5350;
 }
 
+.json-display :deep(.json-removed) {
+  background-color: #c5c5c5;
+  color: #000000;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 3px;
+  border: 1px solid #727272;
+  color: transparent;
+}
+
+.json-display :deep(.json-removed .json-key),
+.json-display :deep(.json-removed .json-string),
+.json-display :deep(.json-removed .json-boolean),
+.json-display :deep(.json-removed .json-null),
+.json-display :deep(.json-removed .json-number) {
+  color: transparent;
+  user-select: none;
+}
 .json-display :deep(.json-char-diff) {
   background-color: #ffeb3b;
   color: #d32f2f;

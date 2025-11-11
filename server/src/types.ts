@@ -14,6 +14,7 @@ export interface DiffResponse {
   success: boolean;
   cacheKey: string;
   differences: Difference[];
+  timestamp: Date;
   summary: {
     total: number;
     added: number;
@@ -27,6 +28,13 @@ export interface CachedDiff {
   updated: any;
   differences: Difference[];
   timestamp: Date;
+  cacheKey: string;
+  summary: {
+    total: number;
+    added: number;
+    removed: number;
+    modified: number;
+  };
 }
 
 export interface Product {
